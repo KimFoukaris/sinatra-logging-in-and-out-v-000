@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-
+binding.pry
     <% if Helper.is_logged_in?(session) == false %>
-    binding.pry
+    
     <% render "/error" %>
     <% else %>
   <h1>Welcome <%= @user.username %></h1>
