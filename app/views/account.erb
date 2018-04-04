@@ -9,7 +9,7 @@
 
     <%# if Helpers.is_logged_in?(session) == true %>
     <p>Welcome <%= @user.username %> </p>
-    <p>Balance: <%= @user.balance %> </p>
+    <p>Your Balance: <%= @user.balance %> </p>
 
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
