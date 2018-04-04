@@ -24,8 +24,6 @@ class ApplicationController < Sinatra::Base
     if session[:user_id] == nil
       erb :error
     else
-    #@user = User.find_by(id: session[:user_id])
-    #binding.pry
       erb :account
     end
   end
@@ -34,6 +32,5 @@ class ApplicationController < Sinatra::Base
     session.clear
     redirect '/'
   end
-
 
 end
