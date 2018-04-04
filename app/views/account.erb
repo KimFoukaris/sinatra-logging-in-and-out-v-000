@@ -7,13 +7,16 @@
   </head>
   <body id="page-top">
 
+    <%# if Helpers.is_logged_in?(session) == true %>
     <p>Username: <%= @user.username %> </p>
-    <p>Password: <%= @user.password %> </p>
     <p>Balance: <%= @user.balance %> </p>
 
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
     </form>
+    <%# else %>
+    <p>You Must <a href="/">Log In</a> to View Your Balance</p>
+    <%# end %>
 
   </body>
 </html>
