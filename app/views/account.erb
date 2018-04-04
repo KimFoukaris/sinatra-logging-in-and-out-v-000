@@ -6,15 +6,12 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-binding.pry
     <% if Helpers.is_logged_in?(session) == false %>
 
     <p>WRONG</p>
     <% else %>
-    <% @user = Helpers.current_user(session) %>
-    binding.pry
-  <h1>Welcome <%= @user.username %></h1>
-  <h3>Your Balance: <%= @user.balance %></h3>
+  <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+  <h3>Your Balance: <%= Helpers.current_user(session).balance %></h3>
 
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
