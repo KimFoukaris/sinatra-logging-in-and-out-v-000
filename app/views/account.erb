@@ -8,8 +8,8 @@
   <body id="page-top">
 
     <%# if Helpers.is_logged_in?(session) == true %>
-    <p>Welcome <%= @user.username %> </p>
-    <p>Your Balance: <%= @user.balance %> </p>
+    <h1>Welcome <%= @user.username %> </h1>
+    <h3>Your Balance: <%= @user.balance %> </h3>
 
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
