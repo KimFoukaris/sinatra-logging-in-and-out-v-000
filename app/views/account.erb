@@ -7,7 +7,8 @@
   </head>
   <body id="page-top">
 
-    <% if is_logged_in?(session) == false %>
+    <% if Helper.is_logged_in?(session) == false %>
+    binding.pry
     <% render "/error" %>
     <% else %>
   <h1>Welcome <%= @user.username %></h1>
